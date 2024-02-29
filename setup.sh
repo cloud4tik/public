@@ -1,49 +1,5 @@
 #!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="nyoqmuda"
-# Color Validation
-Lred='\e[1;91m'
-Lgreen='\e[92m'
-Lyellow='\e[93m'
-green='\e[32m'
-RED='\033[0;31m'
-NC='\033[0m'
-BGBLUE='\e[1;44m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-NC='\033[0;37m'
-# ===================
-echo ''
-clear
-echo ''
-echo -e "$RED                   ⚡ PREMIUM VPN SCRIPT ⚡"$NC
-echo -e "$green.........................................................."$NC
-echo -e "$Lyellow                    Autoscript By KURITA"$NC
-echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @anakjati567"$NC
-echo -e "$Lyellow                       @Back_Door_Trick"$NC
-echo -e "$green.........................................................."$NC
-echo ''
-echo -e "$Lyellow                       Tunggu 6 Saat!"$NC
-echo -e "$green.........................................................."$NC
-sleep 6
-clear
-if [ "${EUID}" -ne 0 ]; then
-		echo "You need to run this script as root"
-		exit 1
-fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-		echo "OpenVZ is not supported"
-		exit 1
-fi
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-
-clear
-echo -e "\e[32mloading...\e[0m"
 clear
 mkdir /var/lib/premium-script;
 default_email=$( curl https://raw.githubusercontent.com/${GitUser}/email/main/default.conf )
