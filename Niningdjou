@@ -1,5 +1,5 @@
 # all vmess
-# vmess : 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+# vmess : 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
 # vless
 
 proxies:
@@ -8,7 +8,7 @@ proxies:
   type: vmess
   server: 104.26.6.171
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -25,7 +25,7 @@ proxies:
   type: vmess
   server: 104.21.21.104
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -42,7 +42,7 @@ proxies:
   type: vmess
   server: 104.18.2.2
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -59,7 +59,7 @@ proxies:
   type: vmess
   server: 104.18.3.2
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -76,7 +76,7 @@ proxies:
   type: vmess
   server: 104.16.87.20
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -95,7 +95,7 @@ proxies:
   type: vmess
   server: v.gg.line.pm
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -114,7 +114,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -131,7 +131,7 @@ proxies:
   type: vmess
   server: cdn.udemy.com
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -148,7 +148,7 @@ proxies:
   type: vmess
   server: api.midtrans.com
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
@@ -165,7 +165,7 @@ proxies:
   type: vmess
   server: edu.ruangguru.com
   port: 80
-  uuid: 2097b3f5-bb85-40c1-8bdb-5923eccecae8
+  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
   alterId: 0
   cipher: auto
   udp: false
