@@ -1,0 +1,91 @@
+#tsel-only
+#vmess : fec447a1-7ef3-4964-abfd-a1aa732de638
+#path : /vmess-ntls
+
+proxies:
+#tsel-vm
+- name: tsel-vm1
+  type: vmess
+  server: 104.26.6.171
+  port: 80
+  uuid: fec447a1-7ef3-4964-abfd-a1aa732de638
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: tsel-vm2
+  type: vmess
+  server: 104.21.21.104
+  port: 80
+  uuid: fec447a1-7ef3-4964-abfd-a1aa732de638
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: tsel-vm3
+  type: vmess
+  server: 104.18.2.2
+  port: 80
+  uuid: fec447a1-7ef3-4964-abfd-a1aa732de638
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: tsel-vm4
+  type: vmess
+  server: 104.18.3.2
+  port: 80
+  uuid: fec447a1-7ef3-4964-abfd-a1aa732de638
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: tsel-vm5
+  type: vmess
+  server: 104.16.87.20
+  port: 80
+  uuid: fec447a1-7ef3-4964-abfd-a1aa732de638
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
