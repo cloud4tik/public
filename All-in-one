@@ -1,0 +1,165 @@
+#vmess : 9289f805-ed9d-4588-9115-e25aea8d5916
+#path : /vmess-ntls
+#vless : 2ab79a90-908e-4b31-9765-ffd732c07b7a
+#path : /vless-ntls
+###trojan : 2ab79a90-908e-4b31-9765-ffd732c07b7a
+#path : /trojan-ntls
+
+proxies:
+#vmess
+- name: vm1
+  type: vmess
+  server: 104.26.6.171
+  port: 80
+  uuid: 9289f805-ed9d-4588-9115-e25aea8d5916
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: vm2
+  type: vmess
+  server: 104.21.21.104
+  port: 80
+  uuid: 9289f805-ed9d-4588-9115-e25aea8d5916
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: vm3
+  type: vmess
+  server: 104.18.2.2
+  port: 80
+  uuid: 9289f805-ed9d-4588-9115-e25aea8d5916
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: vm4
+  type: vmess
+  server: 104.18.3.2
+  port: 80
+  uuid: 9289f805-ed9d-4588-9115-e25aea8d5916
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: vm5
+  type: vmess
+  server: 104.16.87.20
+  port: 80
+  uuid: 9289f805-ed9d-4588-9115-e25aea8d5916
+  alterId: 0
+  cipher: auto
+  udp: false
+  global-padding: false
+  authenticated-length: false
+  skip-cert-verify: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/vmess-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+#vless
+- name: vl1
+  type: vless
+  server: 104.26.6.171
+  port: 80
+  uuid: 2ab79a90-908e-4b31-9765-ffd732c07b7a
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  servername: sg2.cloudtik.my.id
+  network: ws
+  ws-opts:
+    path: "/vless-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: vl2
+  type: vless
+  server: 104.21.21.104
+  port: 80
+  uuid: 2ab79a90-908e-4b31-9765-ffd732c07b7a
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  servername: sg2.cloudtik.my.id
+  network: ws
+  ws-opts:
+    path: "/vless-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: vl3
+  type: vless
+  server: 104.18.2.2
+  port: 80
+  uuid: 2ab79a90-908e-4b31-9765-ffd732c07b7a
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  servername: sg2.cloudtik.my.id
+  network: ws
+  ws-opts:
+    path: "/vless-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: vl4
+  type: vless
+  server: 104.18.3.2
+  port: 80
+  uuid: 2ab79a90-908e-4b31-9765-ffd732c07b7a
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  servername: sg2.cloudtik.my.id
+  network: ws
+  ws-opts:
+    path: "/vless-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
+- name: vl5
+  type: vless
+  server: 104.16.87.20
+  port: 80
+  uuid: 2ab79a90-908e-4b31-9765-ffd732c07b7a
+  udp: true
+  skip-cert-verify: true
+  tls: false
+  servername: sg2.cloudtik.my.id
+  network: ws
+  ws-opts:
+    path: "/vless-ntls"
+    headers:
+      Host: sg2.cloudtik.my.id
