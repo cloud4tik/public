@@ -21,7 +21,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: tsel-vm2
   type: vmess
   server: 104.21.21.104
@@ -38,7 +38,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: tsel-vm3
   type: vmess
   server: 104.18.2.2
@@ -55,7 +55,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: tsel-vm4
   type: vmess
   server: 104.18.3.2
@@ -72,7 +72,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: tsel-vm5
   type: vmess
   server: 104.16.87.20
@@ -89,7 +89,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 #tsel-vl
 - name: tsel-vl1
   type: vless
@@ -99,12 +99,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: tsel-vl2
   type: vless
   server: 104.21.21.104
@@ -113,12 +113,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: tsel-vl3
   type: vless
   server: 104.18.2.2
@@ -127,12 +127,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: tsel-vl4
   type: vless
   server: 104.18.3.2
@@ -141,12 +141,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: tsel-vl5
   type: vless
   server: 104.16.87.20
@@ -155,12 +155,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 
 
 #xlv-vm
@@ -180,7 +180,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 #xlv-vl
 - name: xlv-vl1
   type: vless
@@ -190,12 +190,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 
 
 #xlip-vm
@@ -215,7 +215,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: xlip-vm2
   type: vmess
   server: cdn.udemy.com
@@ -232,7 +232,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: xlip-vm3
   type: vmess
   server: api.midtrans.com
@@ -249,7 +249,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: xlip-vm4
   type: vmess
   server: edu.ruangguru.com
@@ -266,7 +266,7 @@ proxies:
   ws-opts:
     path: "/vmess-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 #xlip-vl
 - name: xlip-vl1
   type: vless
@@ -276,12 +276,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: xlip-vl2
   type: vless
   server: cdn.udemy.com
@@ -290,12 +290,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: xlip-vl3
   type: vless
   server: api.midtrans.com
@@ -304,12 +304,12 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
 - name: xlip-vl4
   type: vless
   server: edu.ruangguru.com
@@ -318,9 +318,9 @@ proxies:
   udp: true
   skip-cert-verify: true
   tls: false
-  servername: sg2.cloudtik.my.id
+  servername: sshsg1.cloudtik.biz.id
   network: ws
   ws-opts:
     path: "/vless-ntls"
     headers:
-      Host: sg2.cloudtik.my.id
+      Host: sshsg1.cloudtik.biz.id
