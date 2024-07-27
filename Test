@@ -1,180 +1,519 @@
-# all vmess
-# vmess : 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-# vless
-
-proxies:
-#tsel-vm
-- name: tsel-vm1
-  type: vmess
-  server: 104.26.6.171
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-- name: tsel-vm2
-  type: vmess
-  server: 104.21.21.104
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-- name: tsel-vm3
-  type: vmess
-  server: 104.18.2.2
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-- name: tsel-vm4
-  type: vmess
-  server: 104.18.3.2
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-- name: tsel-vm5
-  type: vmess
-  server: 104.16.87.20
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-
-#xlv-vm
-- name: xlv-vm1
-  type: vmess
-  server: v.gg.line.pm
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-
-#xlip-vm
-- name: xlip-vm1
-  type: vmess
-  server: 104.17.3.81
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-- name: xlip-vm2
-  type: vmess
-  server: cdn.udemy.com
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-- name: xlip-vm3
-  type: vmess
-  server: api.midtrans.com
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
-- name: xlip-vm4
-  type: vmess
-  server: edu.ruangguru.com
-  port: 80
-  uuid: 739d0d36-ff76-45aa-bcc3-f06a8c9e345e
-  alterId: 0
-  cipher: auto
-  udp: false
-  global-padding: false
-  authenticated-length: false
-  skip-cert-verify: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/vmess-ntls"
-    headers:
-      Host: sg2.cloudtik.my.id
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "api.midtrans.com",
+          "edu.ruangguru.com",
+          "v.gg.line.pm",
+          "cdn.udemy.com"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "172.67.204.84",
+        "104.21.69.44",
+        "2606:4700:3032::6815:452c",
+        "2606:4700:3031::ac43:cc54",
+        "104.17.148.22",
+        "104.17.147.22",
+        "104.21.83.62",
+        "172.67.214.246",
+        "2606:4700:3030::6815:533e",
+        "2606:4700:3030::ac43:d6f6"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "tsel-vm1",
+        "tsel-vm2",
+        "tsel-vm3",
+        "tsel-vm4",
+        "tsel-vm5",
+        "tsel-vl1",
+        "tsel-vl2",
+        "tsel-vl3",
+        "tsel-vl4",
+        "tsel-vl5",
+        "xlv-vm1",
+        "xlv-vl1",
+        "xlip-vm1",
+        "xlip-vm2",
+        "xlip-vm3",
+        "xlip-vm4",
+        "xlip-vl1",
+        "xlip-vl2",
+        "xlip-vl3",
+        "xlip-vl4"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "tsel-vm1",
+        "tsel-vm2",
+        "tsel-vm3",
+        "tsel-vm4",
+        "tsel-vm5",
+        "tsel-vl1",
+        "tsel-vl2",
+        "tsel-vl3",
+        "tsel-vl4",
+        "tsel-vl5",
+        "xlv-vm1",
+        "xlv-vl1",
+        "xlip-vm1",
+        "xlip-vm2",
+        "xlip-vm3",
+        "xlip-vm4",
+        "xlip-vl1",
+        "xlip-vl2",
+        "xlip-vl3",
+        "xlip-vl4"
+      ],
+      "url": "http://cp.cloudflare.com/",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
+    {
+      "type": "vmess",
+      "tag": "tsel-vm1",
+      "server": "104.26.6.171",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "tsel-vm2",
+      "server": "104.21.21.104",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "tsel-vm3",
+      "server": "104.18.2.2",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "tsel-vm4",
+      "server": "104.18.3.2",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "tsel-vm5",
+      "server": "104.16.87.20",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "tsel-vl1",
+      "server": "104.26.6.171",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "tsel-vl2",
+      "server": "104.21.21.104",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "tsel-vl3",
+      "server": "104.18.2.2",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "tsel-vl4",
+      "server": "104.18.3.2",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "tsel-vl5",
+      "server": "104.16.87.20",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vmess",
+      "tag": "xlv-vm1",
+      "server": "v.gg.line.pm",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "xlv-vl1",
+      "server": "v.gg.line.pm",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vmess",
+      "tag": "xlip-vm1",
+      "server": "104.17.3.81",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "xlip-vm2",
+      "server": "cdn.udemy.com",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "xlip-vm3",
+      "server": "api.midtrans.com",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "xlip-vm4",
+      "server": "edu.ruangguru.com",
+      "server_port": 80,
+      "uuid": "b9d9d933-aec6-4194-9fd5-879a457adf8e",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "xlip-vl1",
+      "server": "104.17.3.81",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "xlip-vl2",
+      "server": "cdn.udemy.com",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "xlip-vl3",
+      "server": "api.midtrans.com",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "xlip-vl4",
+      "server": "edu.ruangguru.com",
+      "server_port": 80,
+      "uuid": "88dd697e-7bdc-424a-99e1-3e9c57ded762",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ntls",
+        "headers": {
+          "Host": "sshsg1.cloudtik.biz.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "1-500",
+        "sleep": "0-500"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "path": "geo-assets/sagernet-sing-geoip-geoip.db"
+    },
+    "geosite": {
+      "path": "geo-assets/sagernet-sing-geosite-geosite.db"
+    },
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "A9A_lcZOrVzh9sMI"
+    }
+  }
+}
